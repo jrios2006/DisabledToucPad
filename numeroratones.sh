@@ -11,7 +11,7 @@ then
 	echo "El Touchpad está desactivado"
 elif [ $v -gt 2 ];
 then
-	echo "Tengo al menos un ratón USB. Desactivo mi superfice de raón táctil"
+	echo "Tengo al menos un ratón USB. Desactivo mi superfice de ratón táctil"
 	/usr/bin/synclient TouchpadOff=1
 else
 	echo "El Touchpad está activado y no hay ratones usb conectados a la máquina"

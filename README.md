@@ -7,7 +7,7 @@ En las últimas versiones de las diferentes distribuciones se puede desactivar e
 
 Además cada vez se hacen más grande el espacio del ratón táctil con lo cual se me hace más complicado usar el teclado sin interferencias con el ratón.
 
-Por esto no quiero usar el ratón así dispouesto en el portátil y prefiero usar un ratón externo. Así cuando conecto un ratón quiero desactivar esa zona del ratón Touchpad y colocar corectamente mis manos sobre el teclado.
+Por esto no quiero usar el ratón así dispuesto en el portátil y prefiero usar un ratón externo. Así cuando conecto un ratón quiero desactivar esa zona del ratón Touchpad y colocar corectamente mis manos sobre el teclado.
 
 Con apenas cuatro líneas podemos consegur el resultado esperado.
 
@@ -80,7 +80,7 @@ ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/[Usuario]/.Xauthority", RUN+="/usr/bin
 </code>
 le decimos donde se a ejecutar el programa, y que programa vamos a ejecutar.
 
-Una vez puesto el fichero es su ruta, que es /etc/udev/rules.d/ y recargamos la reglas udev o reiniciamos la máquina, cuando conectemos o desconectamos un dispotivo mouse se ejecutarán el programa que le decimos.
+Una vez puesto el fichero es su ruta, que es /etc/udev/rules.d/ y recargamos la reglas udev o reiniciamos la máquina, cuando conectemos o desconectamos un dispositivo mouse se ejecutarán el programa que le decimos.
 
 ## Casos no conteplados
 
@@ -97,4 +97,6 @@ Puede ocurrir que haya más de dos ratones usb conectados sin darnos cuenta y qu
 * Copiar el fichero numeroratones.sh a /usr/bin y hacerlo ejecutable (chmod +x /usr/bin/numeroratones.sh)
 * Programar la ejecución de este programa al incio de sesión. Dejo unos ficheros gráficos con patallazo en el entorno de escritorio Mate en la carpeta Pantallazo
 
+## Agradecimmientos
 
+[http://www.rafamartorell.com/](https://rafamartorell.wordpress.com/2013/05/01/desactivar-el-panel-tactil-cuando-se-detecta-un-raton-externo/)
