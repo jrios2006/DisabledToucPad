@@ -97,6 +97,13 @@ Puede ocurrir que haya más de dos ratones usb conectados sin darnos cuenta y qu
 * Copiar el fichero numeroratones.sh a /usr/bin y hacerlo ejecutable (chmod +x /usr/bin/numeroratones.sh)
 * Programar la ejecución de este programa al incio de sesión. Dejo unos ficheros gráficos con patallazo en el entorno de escritorio Mate en la carpeta Pantallazo
 
+## Antergos
+
+Tengo una máquina con Antergos edición Mate. Lo primero que hay que hacer es instalar el programa para poder usar el driver del ratón touchpad, pues por defecto no viene instalado (synclient). Hayq ue instalar el paquete [xf86-input-synaptics](https://www.archlinux.org/packages/?name=xf86-input-synaptics). Basta usar el comando <code>sudo pacman -S xf86-input-synaptics</code>
+
+Además debemos modificar el archivo <code>/etc/X11/xorg.conf.d/50-synaptics.conf</code> y añadir esta línea <code>MatchDevicePath "/dev/input/event*"</code> como se dice en la URL [Xorg y Touchpad](https://wiki.archlinux.org/index.php/Touchpad_Synaptics#The_touchpad_is_not_working.2C_Xorg.0.log_shows_.22Query_no_Synaptics:_6003C8.22). Consiste en no cargar varias veces el módulo del touchpad.
+
+
 ## Agradecimmientos
 
 [http://www.rafamartorell.com/](https://rafamartorell.wordpress.com/2013/05/01/desactivar-el-panel-tactil-cuando-se-detecta-un-raton-externo/)
